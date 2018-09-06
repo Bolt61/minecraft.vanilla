@@ -7,6 +7,12 @@ public class Main extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		super.onEnable();
-		System.out.println("Plugin enabled");
+		System.out.println("Plugin successfully enabled");
+	}
+	
+	@Override
+	public void onDisable() {
+		super.onDisable();
+		System.out.println("Plugin successfully disabled");
 	}
 }
