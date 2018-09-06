@@ -1,0 +1,7 @@
+name: MinecraftServer
+authors: [Bolt61]
+main: ch.bolt61.vanillaserver.Main
+version: 0.0.1
+description: A server plugin
+website: nartr.ch
+contact: bolt61.minecraft@gmail.com
