@@ -5,22 +5,15 @@
 #                                       #
 #########################################
 
-Messages:
-  join: '&6[player] ist dem Spiel beigetreten'
-  quit: '&6[player] hat das Spiel verlassen'
-  no_console: '&cDu musst ein Spieler sein'
-  no_right: '&cDu hast nicht das Recht, diesen Befehl auszufuehren'
-  position:
-    lobby: '&6Lobby erfolgreich gesetzt'
-Settings:
-Permissions:
-  info:
-    - '&7*** &4Permissions &7***'
-    - '&6/perm set <spieler> <gruppe>'
-    - '&6/perm remove <gruppe> <permission>'
-    - '&6/perm add <gruppe> <permission>'
-    - '&6/perm get <gruppe>
-MySQL:
+deleted_commands:
+  - icanhasbukkit
+  - me
+  - tell
+deleted_permissions:
+  - bukkit.command
+not_deleted_commands:
+  - reload
+mysql:
   host: localhost
   database: minecraft
   user: user

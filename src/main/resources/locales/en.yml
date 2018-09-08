@@ -1,0 +1,3 @@
+events:
+  join: '&aPlayer &r&4<player> &a joined the game'
+  quit: '&cPlayer &r&4<player> &c left the game'
