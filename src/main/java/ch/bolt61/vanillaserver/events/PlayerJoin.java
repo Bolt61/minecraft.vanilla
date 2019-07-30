@@ -6,10 +6,16 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import ch.bolt61.vanillaserver.Main;
 import ch.bolt61.vanillaserver.locales.LanguageEnum;
+import ch.bolt61.vanillaserver.locales.LocaleService;
 
 public class PlayerJoin implements Listener {
+  
+  private LocaleService localeService;
+  
+  public PlayerJoin(LocaleService localeService) {
+    this.localeService = localeService;
+  }
 
 	@EventHandler
 	public void onJoin(PlayerJoinEvent e) {
@@ -18,8 +24,7 @@ public class PlayerJoin implements Listener {
 		Player p = e.getPlayer();
 		
 		for(Player all : Bukkit.getOnlinePlayers()) {
-			all.sendMessage(Main.getInstance().getLocaleService().getMessage("events.join", LanguageEnum.GERMAN)
-					.replace("<player>", p.getDisplayName()));
+			all.sendMessage(localeService.getMessage("events.join", LanguageEnum.GERMAN).replace("<player>", p.getDisplayName()));
 		}
 	}
 }

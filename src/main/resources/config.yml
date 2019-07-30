@@ -13,9 +13,3 @@ deleted_permissions:
   - bukkit.command
 not_deleted_commands:
   - reload
-mysql:
-  host: localhost
-  database: minecraft
-  user: user
-  password: pass
-  port: 3306

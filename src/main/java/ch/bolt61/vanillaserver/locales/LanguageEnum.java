@@ -2,14 +2,20 @@ package ch.bolt61.vanillaserver.locales;
 
 public enum LanguageEnum {
 
-	GERMAN("de"),
-	ENGLISH("en");
+	GERMAN("German", "de"),
+	ENGLISH("English", "en");
 	
+  private String label;
 	private String code;
 	
-	private LanguageEnum(String code) {
+	private LanguageEnum(String label, String code) {
+	  this.label = label;
 		this.code = code;
 	}
+	
+	public String getLabel() {
+    return label;
+  }
 	
 	public String getCode() {
 		return code;

@@ -1,3 +1,4 @@
 events:
   join: '&aPlayer &r&4<player> &a joined the game'
   quit: '&cPlayer &r&4<player> &c left the game'
+  death: '&cDeath-Location: &e<world>&7|&e<x>&7|&e<y>&7|&e<z>'

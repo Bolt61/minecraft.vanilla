@@ -5,3 +5,9 @@ version: 0.0.1
 description: A server plugin
 website: nartr.ch
 contact: bolt61.minecraft@gmail.com
+
+commands:
+  set:
+    description: Create a Position entry
+    usage: /position <name>
+    aliases: []
