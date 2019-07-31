@@ -33,7 +33,7 @@ public class LocaleService {
 		for(LanguageEnum l : LanguageEnum.values()) {
 			try {
 				File file = new File(plugin.getDataFolder() + File.separator + FOLDER, MessageFormat.format(FILE_NAME, l.getCode()));
-				FileUtils.copyFromResources(getClass(), MessageFormat.format(RESOURCE_PATH, l.getCode()), file, OVERRIDE);
+				FileUtils.copyFromResources(MessageFormat.format(RESOURCE_PATH, l.getCode()), file, OVERRIDE);
 				languageFiles.put(l, file);
 				plugin.getLogger().log(Level.INFO, MessageFormat.format("Created locale-file " + FILE_NAME, l.getCode()));
 			} catch (IOException e) {

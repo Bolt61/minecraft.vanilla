@@ -10,13 +10,17 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 
 import ch.bolt61.vanillaserver.locales.LanguageEnum;
 import ch.bolt61.vanillaserver.locales.LocaleService;
+import ch.bolt61.vanillaserver.statistics.PlayerStatistics;
+import ch.bolt61.vanillaserver.statistics.StatisticsService;
 
 public class PlayerDeath implements EventListener {
   
   private LocaleService localeService;
+  private StatisticsService statisticsService;
   
-  public PlayerDeath(LocaleService localeService) {
+  public PlayerDeath(LocaleService localeService, StatisticsService statisticsService) {
     this.localeService = localeService;
+    this.statisticsService = statisticsService;
   }
 
   @EventHandler
@@ -32,5 +36,8 @@ public class PlayerDeath implements EventListener {
           .replace("<y>", String.valueOf(loc.getBlockY()))
           .replace("<z>", String.valueOf(loc.getBlockZ()))));
     }
+    
+    PlayerStatistics statistics = statisticsService.getStatistics(p);
+    statistics.addDeath();
   }
 }

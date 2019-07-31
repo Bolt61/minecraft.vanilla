@@ -1,6 +1,6 @@
-name: MinecraftServer
+name: VanillaServer
 authors: [Bolt61]
-main: ch.bolt61.vanillaserver.Main
+main: ch.bolt61.vanillaserver.ServerStarter
 version: 0.0.1
 description: A server plugin
 website: nartr.ch
@@ -8,6 +8,18 @@ contact: bolt61.minecraft@gmail.com
 
 commands:
   set:
-    description: Create a Position entry
-    usage: /position <name>
+    description: Create a position entry
+    usage: /set <name>
     aliases: []
+  positions:
+    description: Get all positions
+    usage: /positions
+    aliases: [pos]
+  remove:
+    description: Remove a position entry
+    usage: /remove <name>
+    aliases: []
+  statistics:
+    description: Show your statistics
+    usage: /statistics
+    aliases: [stats]

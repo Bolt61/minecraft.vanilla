@@ -10,17 +10,18 @@ import java.io.InputStreamReader;
 
 public class FileUtils {
 
-	public static void copyFromResources(Class<?> remote, String path, File file, boolean override) throws IOException {
+	public static void copyFromResources(String path, File file, boolean override) throws IOException {
 		file.getParentFile().mkdirs();
 		if(file.exists()) {
 			if(override) {
 				file.delete();
+				file.createNewFile();
 			}
 		} else {
 			file.createNewFile();
 		}
 		BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-		InputStream input = remote.getResourceAsStream(path);
+		InputStream input = FileUtils.class.getResourceAsStream(path);
 		BufferedReader br = new BufferedReader(new InputStreamReader(input));
 		String line;
 		while((line = br.readLine()) != null) {

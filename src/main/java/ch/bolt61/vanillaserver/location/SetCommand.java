@@ -28,20 +28,11 @@ public class SetCommand implements CommandExecutor {
         }
       } else {
         sender.sendMessage("This command is not for console use");
-        return true;
       }
+    } else {
+      sender.sendMessage(" §7Benutze: §e/set <position>");
     }
     
     return true;
   }
-  
-  /*
-   *     if(args.length == 0) {
-      sender.sendMessage("§7======== §ePositionen §7========");
-      for(String name : locationService.getAllLocationNames()) {
-        sender.sendMessage(" §7-§e" + name);
-      }
-      return true;
-    } 
-   */
 }
